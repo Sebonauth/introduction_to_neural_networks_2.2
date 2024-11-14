@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Marvel of Neurons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            font-size: 150%;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            display: none; /* Initially hidden */
+        }
+        h1 {
+            text-align: left;
+            color: #333;
+            margin-top: 20px;
+        }
+        p {
+            line-height: 1.6;
+            color: #444;
+        }
+        .image-placeholder, .continue-button {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .vocab-section {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .vocab-section h3 {
+            color: #1e90ff;
+            font-size: 0.75em;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .vocab-section h4 {
+            color: #000;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .vocab-term {
+            font-weight: bold;
+            color: #1e90ff;
+        }
+        .continue-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Lesson Introduction Section -->
+    <section id="section1">
+        <h1>The Marvel of Neurons</h1>
+        <p>Imagine standing in a bustling city where countless messages are exchanged every second—texts, calls, conversations. Similarly, your brain is a metropolis of neurons, each sending and receiving signals at incredible speeds.</p>
+        
+        <!-- Image Placeholder under First Paragraph -->
+        <div class="image-placeholder">
+            <img src="path-to-city-metaphor-image.jpg" alt="Illustration of a bustling city representing neuron communication">
+        </div>
+        
+        <div class="continue-button" onclick="showNextSection(2)">Continue</div>
+    </section>
+
+    <!-- Neuron Structure Section -->
+    <section id="section2">
+        <p>A neuron, the fundamental unit of the nervous system, consists of three main parts:</p>
+        <ul>
+            <li><strong>Dendrites:</strong> Branch-like structures that receive messages from other neurons.</li>
+            <li><strong>Cell Body (Soma):</strong> The neuron's core that processes incoming signals.</li>
+            <li><strong>Axon:</strong> A long fiber that transmits signals to other neurons or muscles.</li>
+        </ul>
+        <div class="image-placeholder">
+            <img src="path-to-neuron-diagram.jpg" alt="Diagram of a neuron with dendrites, soma, axon, and synaptic terminals labeled">
+        </div>
+        <div class="continue-button" onclick="showNextSection(3)">Continue</div>
+    </section>
+
+    <!-- Vocabulary Section -->
+    <section id="section3">
+        <div class="vocab-section">
+            <h3>Build Your Vocab</h3>
+            <h4 class="vocab-term">Neuron</h4>
+            <p>A specialized cell transmitting nerve impulses; a nerve cell.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(4)">Continue</div>
+    </section>
+
+    <!-- Final Explanation Section -->
+    <section id="section4">
+        <p>Just like how you process information from your senses, neurons receive inputs, decide whether to act on them, and then send outputs accordingly.</p>
+    </section>
+
+    <script>
+        // Show the first section initially
+        document.getElementById("section1").style.display = "block";
+
+        // Function to show the next section and hide the current continue button
+        function showNextSection(nextSectionId) {
+            const currentButton = event.target;
+            currentButton.style.display = "none"; // Hide the clicked button
+            document.getElementById("section" + nextSectionId).style.display = "block"; // Show the next section
+            window.scrollTo(0, document.getElementById("section" + nextSectionId).offsetTop); // Scroll to the next section
+        }
+    </script>
+
+</body>
+</html>
