@@ -20,30 +20,20 @@
             opacity: 0;
             transition: opacity 0.5s ease-in;
         }
-        p, h4 {
+        p {
             line-height: 1.6;
             color: #444;
             margin-bottom: 20px;
         }
-        .vocab-section {
-            background-color: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
+        .image-placeholder {
+            margin: 20px 0;
+            text-align: center;
         }
-        .vocab-section h4 {
-            color: #000;
-            margin-top: 10px;
-        }
-        .vocab-term {
-            font-weight: bold;
-            color: #1e90ff;
-        }
-        .why-it-matters {
-            background-color: #fffbf0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            color: #333;
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
         .continue-button {
             display: inline-block;
@@ -59,59 +49,10 @@
         .continue-button:hover {
             background-color: #0056b3;
         }
-        .test-your-knowledge {
-            margin: 20px 0;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .test-your-knowledge h4 {
-            margin-bottom: 10px;
-        }
-        .test-your-knowledge ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .test-your-knowledge li {
-            margin: 10px 0;
-        }
-        .test-your-knowledge button {
-            padding: 10px 20px;
-            color: #ffffff;
-            background-color: #28a745;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .test-your-knowledge button:hover {
-            background-color: #218838;
-            transform: scale(1.05);
-        }
-        .test-your-knowledge button:active {
-            background-color: #1e7e34;
-            transform: scale(0.95);
-        }
-        .explanation {
-            display: none;
-            background-color: #eaf5ff;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-        .image-placeholder img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Page 1: What Is a Biological Neuron? -->
     <section id="section1">
         <p>Your brain contains billions of neurons, forming an intricate network that enables you to think, feel, and move.</p>
         <div class="continue-button" data-next-section="2">Continue</div>
@@ -125,86 +66,21 @@
     <section id="section3">
         <p>But what exactly does a neuron look like, and how does it work?</p>
         <div class="image-placeholder">
-            <img src="path-to-neuron-diagram.jpg" alt="A detailed diagram of a biological neuron showing dendrites, soma, axon, and synaptic terminals" loading="lazy">
+            <img src="path-to-neuron-diagram.jpg" alt="Detailed diagram of a biological neuron, labeling the dendrites, cell body (soma), axon, and synaptic terminals" loading="lazy">
         </div>
         <div class="continue-button" data-next-section="4">Continue</div>
     </section>
 
     <section id="section4">
         <p>Let's delve into the anatomy of a neuron to understand its role in the nervous system.</p>
-        <div class="continue-button" data-next-section="5">Continue</div>
-    </section>
-
-    <!-- Page 2: Anatomy of a Biological Neuron -->
-    <section id="section5">
-        <p>A typical neuron consists of three main parts: the <strong>dendrites</strong>, the <strong>cell body</strong> (or <strong>soma</strong>), and the <strong>axon</strong>.</p>
-        <div class="continue-button" data-next-section="6">Continue</div>
-    </section>
-
-    <section id="section6">
-        <p>The <strong>dendrites</strong> are branching extensions that receive incoming signals from other neurons.</p>
-        <div class="image-placeholder">
-            <img src="path-to-dendrites-highlight.jpg" alt="Highlighted dendrites on a neuron diagram showing connections from neighboring neurons" loading="lazy">
-        </div>
-        <div class="continue-button" data-next-section="7">Continue</div>
-    </section>
-
-    <section id="section7">
-        <p>These signals are then transmitted to the <strong>cell body</strong>, where they are integrated.</p>
-        <div class="continue-button" data-next-section="8">Continue</div>
-    </section>
-
-    <section id="section8">
-        <p>If the combined signal is strong enough, the neuron generates an electrical impulse called an <strong>action potential</strong>.</p>
-        <div class="vocab-section">
-            <h4>Build Your Vocab</h4>
-            <p><span class="vocab-term">Action Potential</span>: An action potential is a rapid rise and fall in electrical membrane potential that transmits signals along the neuron's axon.</p>
-        </div>
-        <div class="continue-button" data-next-section="9">Continue</div>
-    </section>
-
-    <section id="section9">
-        <p>The <strong>axon</strong> is a long, slender projection that carries the action potential away from the cell body toward other neurons.</p>
-        <div class="image-placeholder">
-            <img src="path-to-axon-highlight.jpg" alt="Highlighted axon extending from the cell body with action potential shown traveling along it" loading="lazy">
-        </div>
-        <div class="continue-button" data-next-section="10">Continue</div>
-    </section>
-
-    <section id="section10">
-        <p>At the end of the axon are the <strong>synaptic terminals</strong>, where the neuron communicates with other neurons via chemical messengers called neurotransmitters.</p>
-        <div class="continue-button" data-next-section="11">Continue</div>
-    </section>
-
-    <section id="section11">
-        <p>This process allows neurons to communicate and form complex networks that underlie all brain functions.</p>
-        <div class="why-it-matters">
-            <p><strong>Why It Matters:</strong> Understanding the structure and function of biological neurons provides insights into how our brains process information and how we can model these processes in artificial systems.</p>
-        </div>
-        <div class="continue-button" data-next-section="12">Continue</div>
-    </section>
-
-    <section id="section12">
-        <div class="test-your-knowledge">
-            <h4>Test Your Knowledge</h4>
-            <p>Which part of the neuron is responsible for receiving signals from other neurons?</p>
-            <ul>
-                <li><button onclick="showExplanation(1)">Axon</button></li>
-                <li><button onclick="showExplanation(2)">Dendrites</button></li>
-                <li><button onclick="showExplanation(3)">Synaptic terminals</button></li>
-                <li><button onclick="showExplanation(4)">Cell body</button></li>
-            </ul>
-            <div id="explanation1" class="explanation">The axon transmits signals away from the neuron, not receives them.</div>
-            <div id="explanation2" class="explanation">Correct! Dendrites receive incoming signals from other neurons.</div>
-            <div id="explanation3" class="explanation">Synaptic terminals are involved in sending signals to other neurons.</div>
-            <div id="explanation4" class="explanation">The cell body processes signals but doesn't primarily receive them.</div>
-        </div>
     </section>
 
     <script>
+        // Show the first section initially
         document.getElementById("section1").style.display = "block";
         document.getElementById("section1").style.opacity = "1";
 
+        // Event listener for all continue buttons
         document.addEventListener('click', (event) => {
             if (event.target.classList.contains('continue-button')) {
                 const nextSectionId = event.target.getAttribute('data-next-section');
@@ -215,10 +91,7 @@
                 setTimeout(() => nextSection.scrollIntoView({ behavior: 'smooth' }), 500);
             }
         });
-
-        function showExplanation(id) {
-            document.getElementById(`explanation${id}`).style.display = "block";
-        }
     </script>
+
 </body>
 </html>
