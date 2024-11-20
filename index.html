@@ -144,20 +144,21 @@
         <h1>What Is a Biological Neuron?</h1>
 
         <p>Your brain contains billions of neurons, forming an intricate network that enables you to think, feel, and move.</p>
+
         <div class="continue-button" onclick="showNextSection(2)">Continue</div>
     </section>
 
-    <!-- Section 2: Neuron as an Information Processor -->
+    <!-- Section 2: Information Processing -->
     <section id="section2">
         <p>Each neuron acts like a tiny information processor, receiving, integrating, and transmitting signals.</p>
         <div class="continue-button" onclick="showNextSection(3)">Continue</div>
     </section>
 
-    <!-- Section 3: Structure of a Neuron -->
+    <!-- Section 3: Neuron Structure -->
     <section id="section3">
         <p>But what exactly does a neuron look like, and how does it work?</p>
         <div class="image-placeholder">
-            <img src="images/biological_neuron_diagram.png" alt="Detailed diagram of a biological neuron, labeling the dendrites, cell body (soma), axon, and synaptic terminals.">
+            <img src="images/biological_neuron.png" alt="Detailed diagram of a biological neuron, labeling the dendrites, cell body (soma), axon, and synaptic terminals.">
         </div>
         <div class="continue-button" onclick="showNextSection(4)">Continue</div>
     </section>
@@ -165,7 +166,6 @@
     <!-- Section 4: Anatomy of a Neuron -->
     <section id="section4">
         <p>Let's delve into the anatomy of a neuron to understand its role in the nervous system.</p>
-        <div class="continue-button" onclick="showNextSection(5)">Continue</div>
     </section>
 
     <script>
@@ -179,7 +179,9 @@
             const nextSection = document.getElementById("section" + nextSectionId);
             
             // Hide the clicked button
-            currentButton.style.display = "none";
+            if (currentButton.classList.contains("continue-button")) {
+                currentButton.style.display = "none";
+            }
             
             // Show the next section with a fade-in effect
             nextSection.style.display = "block";
@@ -191,6 +193,24 @@
             setTimeout(() => {
                 nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 500); // Delay scrolling until fade-in completes
+        }
+
+        // Function to check the selected answer in Test Your Knowledge
+        function checkAnswer() {
+            const selectedAnswer = document.querySelector('input[name="xor-answer"]:checked');
+            const result = document.getElementById("result");
+            const explanation = document.getElementById("explanation");
+            const checkButton = document.querySelector(".check-button");
+
+            if (selectedAnswer) {
+                checkButton.style.display = "none"; // Hide the check button after clicking
+
+                if (selectedAnswer.value === "option4") {
+                    result.style.display = "block"; // Show "Correct!" if the correct answer is selected
+                } else {
+                    explanation.style.display = "block"; // Show explanation if the answer is incorrect
+                }
+            }
         }
     </script>
 
