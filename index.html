@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Is a Biological Neuron?</title>
+    <title>The Biological Blueprint</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,9 +17,9 @@
             margin-bottom: 20px;
             padding: 20px;
             background-color: #ffffff;
-            display: none; /* Initially hidden */
-            opacity: 0; /* Initially invisible for fade-in effect */
-            transition: opacity 0.5s ease-in; /* Fade-in effect */
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
         }
         h1, h3, h4 {
             color: #333;
@@ -33,7 +33,7 @@
         ul {
             padding-left: 20px;
         }
-        .image-placeholder, .interactive-placeholder, .continue-button, .vocab-section, .why-it-matters, .test-your-knowledge, .faq-section {
+        .image-placeholder, .interactive-placeholder, .continue-button, .vocab-section, .why-it-matters, .stop-and-think {
             text-align: left;
         }
         .image-placeholder img, .interactive-placeholder img {
@@ -41,7 +41,7 @@
             height: auto;
             border-radius: 5px;
         }
-        .vocab-section, .why-it-matters, .test-your-knowledge, .faq-section {
+        .vocab-section, .why-it-matters, .stop-and-think {
             padding: 20px;
             border-radius: 8px;
             margin-top: 20px;
@@ -80,46 +80,16 @@
             margin-top: 10px;
             margin-bottom: 8px;
         }
-        .test-your-knowledge {
-            background-color: #e6ffe6; /* Light green background */
+        .stop-and-think {
+            background-color: #e6ffe6;
         }
-        .test-your-knowledge h3 {
-            color: #28a745; /* Dark green heading */
+        .stop-and-think h3 {
+            color: #28a745;
             font-size: 0.75em;
             margin-bottom: 5px;
             margin-top: 5px;
         }
-        .test-your-knowledge h4 {
-            color: #000;
-            font-size: 0.9em;
-            margin-top: 10px;
-            margin-bottom: 8px;
-        }
-        .test-your-knowledge p {
-            margin-bottom: 15px;
-        }
-        .check-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 15px;
-            color: #ffffff;
-            background-color: #28a745; /* Green background */
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            font-size: 1em;
-        }
-        .faq-section {
-            background-color: #fffbea; /* Light yellow background */
-        }
-        .faq-section h3 {
-            color: #ffcc00; /* Bright yellow heading */
-            font-size: 0.75em;
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-        .faq-section h4 {
+        .stop-and-think h4 {
             color: #000;
             font-size: 0.9em;
             margin-top: 10px;
@@ -135,43 +105,68 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .reveal-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            color: #ffffff;
+            background-color: #28a745;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Section 1: Lesson Introduction -->
     <section id="section1">
-        <h1>What Is a Biological Neuron?</h1>
-
-        <p>Your brain contains billions of neurons, forming an intricate network that enables you to think, feel, and move.</p>
-
+        <h1>The Biological Blueprint</h1>
+        <p>Let's start our journey by looking at what happens in your brain when you catch that slipping coffee cup. The story begins with a single neuron – a cell that might look simple at first glance but performs an intricate dance of electrical and chemical signals.</p>
         <div class="continue-button" onclick="showNextSection(2)">Continue</div>
     </section>
 
-    <!-- Section 2: Information Processing -->
     <section id="section2">
-        <p>Each neuron acts like a tiny information processor, receiving, integrating, and transmitting signals.</p>
+        <p>Picture a tree in winter. The bare branches spreading out in all directions look remarkably similar to a neuron's dendrites – the input receivers of our cellular superstar. Just as a tree's branches collect sunlight, dendrites collect signals from other neurons.</p>
+        <div class="vocab-section">
+            <h3>Build Your Vocab</h3>
+            <h4>Neuron</h4>
+            <p>A specialized cell that processes and transmits information through electrical and chemical signals. It's the basic working unit of the brain and nervous system.</p>
+        </div>
         <div class="continue-button" onclick="showNextSection(3)">Continue</div>
     </section>
 
-    <!-- Section 3: Neuron Structure -->
     <section id="section3">
-        <p>But what exactly does a neuron look like, and how does it work?</p>
-        <div class="image-placeholder">
-            <img src="images/biological_neuron.png" alt="Detailed diagram of a biological neuron, labeling the dendrites, cell body (soma), axon, and synaptic terminals.">
+        <p>Let's meet the main characters in our neural story:</p>
+        <div class="interactive-placeholder">
+            <img src="/placeholder.svg?height=400&width=600" alt="Interactive diagram of a neuron">
+        </div>
+        <ul>
+            <li>Dendrites: Think of these as the neuron's antennae, collecting messages from neighboring cells</li>
+            <li>Cell Body (Soma): The neuron's command center, where all incoming signals are processed</li>
+            <li>Axon: A long cable that carries the neuron's message to other cells</li>
+            <li>Synapses: The communication points where signals jump from one neuron to another</li>
+        </ul>
+        <div class="stop-and-think">
+            <h3>Stop and Think</h3>
+            <p>Before we continue, look at your hand for a moment. When you move your fingers, countless neurons are firing in sequence. Why do you think we need so many neurons just for simple movements?</p>
+            <div class="reveal-button" onclick="revealAnswer()">Reveal Answer</div>
+            <p id="reveal-answer" style="display: none;">Each neuron specializes in a specific aspect of the movement – some detect pressure, others control individual muscle fibers, and still others coordinate the timing. It's this specialization and cooperation that makes smooth, precise movements possible.</p>
         </div>
         <div class="continue-button" onclick="showNextSection(4)">Continue</div>
     </section>
 
-    <!-- Section 4: Anatomy of a Neuron -->
     <section id="section4">
-        <p>Let's delve into the anatomy of a neuron to understand its role in the nervous system.</p>
-    </section>
+        <p>Now, here's where things get really interesting. When your fingers sense that coffee cup slipping, thousands of neurons spring into action. But how does a single neuron decide when to join this neural chorus? Let's break down this fascinating process.</p>
+        <div class="why-it-matters">
+            <h3>Why It Matters</h3>
+            <p>Understanding how biological neurons work isn't just academic curiosity – it's the foundation for how we've built artificial neural networks. Every major breakthrough in deep learning can trace its roots back to insights from neuroscience.</p>
+        </div>
+     </section>
 
+  
     <script>
         // Show the first section initially
         document.getElementById("section1").style.display = "block";
-        document.getElementById("section1").style.opacity = "1"; // Make the first section visible
+        document.getElementById("section1").style.opacity = "1";
 
         // Function to show the next section with fade-in and then scroll to it
         function showNextSection(nextSectionId) {
@@ -179,40 +174,31 @@
             const nextSection = document.getElementById("section" + nextSectionId);
             
             // Hide the clicked button
-            if (currentButton.classList.contains("continue-button")) {
-                currentButton.style.display = "none";
-            }
+            currentButton.style.display = "none";
             
             // Show the next section with a fade-in effect
             nextSection.style.display = "block";
             setTimeout(() => {
-                nextSection.style.opacity = "1"; // Fade in the section
+                nextSection.style.opacity = "1";
             }, 10);
 
             // Scroll to the new section after it fades in
             setTimeout(() => {
                 nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500); // Delay scrolling until fade-in completes
+            }, 500);
         }
 
-        // Function to check the selected answer in Test Your Knowledge
-        function checkAnswer() {
-            const selectedAnswer = document.querySelector('input[name="xor-answer"]:checked');
-            const result = document.getElementById("result");
-            const explanation = document.getElementById("explanation");
-            const checkButton = document.querySelector(".check-button");
-
-            if (selectedAnswer) {
-                checkButton.style.display = "none"; // Hide the check button after clicking
-
-                if (selectedAnswer.value === "option4") {
-                    result.style.display = "block"; // Show "Correct!" if the correct answer is selected
-                } else {
-                    explanation.style.display = "block"; // Show explanation if the answer is incorrect
-                }
-            }
+        // Function to reveal the answer in the Stop and Think section
+        function revealAnswer() {
+            const answer = document.getElementById("reveal-answer");
+            const revealButton = event.target;
+            
+            answer.style.display = "block";
+            revealButton.style.display = "none";
         }
     </script>
+</body>
+</html>
 
 </body>
 </html>
